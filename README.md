@@ -3,7 +3,7 @@
 
 This is a modern Fortran implementation of the three-dimensional gravity modeling with parabolic density contrast presented in [3-D forward gravity modeling of basement interfaces above which the density contrast varies continuously with depth](https://www.sciencedirect.com/science/article/pii/S0098300401000802) by V. Chakravarthi, H. M. Raghuram and S. B. Singh.
 
-## Building grav3dmod
+## Building gravmod3d
 
 A [Fortran Package Manager](https://github.com/fortran-lang/fpm) manifest file is included, so that the library and a simple example can be compiled with FPM. For example:
 
@@ -20,7 +20,7 @@ In this case, the example must be run via
 fpm run --profile release --flag "-fopenmp"
 ```
 
-To use `grav3dmod` within your FPM project, add the following to your `fpm.toml` file:
+To use `gravmod3d` within your FPM project, add the following to your `fpm.toml` file:
 ```toml
 [dependencies]
 gravmod3d = { git="https://github.com/ofmla/gravmod3d.git" }
