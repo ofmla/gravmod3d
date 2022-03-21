@@ -9,7 +9,7 @@ A [Fortran Package Manager](https://github.com/fortran-lang/fpm) manifest file i
 
 ```
 fpm build --profile release
-fpm run --profile release
+fpm run --profile release -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/gravity_anomaly.dat
 ```
 To build an Open-MP version of the library, use:
 ```
@@ -17,7 +17,7 @@ fpm build --profile release --flag "-fopenmp"
 ```
 In this case, the example must be run via
 ```
-fpm run --profile release --flag "-fopenmp"
+fpm run --profile release --flag "-fopenmp" -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/grav_anomaly.dat
 ```
 
 To use `gravmod3d` within your FPM project, add the following to your `fpm.toml` file:
@@ -25,7 +25,7 @@ To use `gravmod3d` within your FPM project, add the following to your `fpm.toml`
 [dependencies]
 gravmod3d = { git="https://github.com/ofmla/gravmod3d.git" }
 ```
-Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` GMT script (in `/data/gmt_scripts/` folder) after ran `fpm run --profile release` or `fpm run --profile release --flag "-fopenmp"`.
+Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` GMT script (in `/data/gmt_scripts/` folder) after ran any of the `fpm run` commands above.
 
 <p align="center">
   <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour.svg#gh-light-mode-only" width="600"/>
