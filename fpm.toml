@@ -1,0 +1,18 @@
+name = "grav3d"
+author = "Oscar Mojica"
+copyright  = "Copyright (c) 2022, Oscar Mojica"
+license = "BSD-3"
+description = "3D gravity modeling of sedimentary basins with parabolic density contrast in modern Fortran"
+homepage = "https://github.com/ofmla/gravmod3d"
+keywords = ["gravity anomaly", "3D", "parabolic density contrast"]
+
+[build]
+auto-executables = false
+auto-examples = false
+auto-tests = false
+
+[library]
+source-dir = "src"
+
+[install]
+library = true
