@@ -11,12 +11,16 @@ A [Fortran Package Manager](https://github.com/fortran-lang/fpm) manifest file i
 fpm build --profile release
 fpm run --profile release -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/gravity_anomaly.dat
 ```
+
+The example program computes the gravity field of a sedimentary basin (which is approximated by a set of prisms) on a regular grid of observation points. It reads four command-line arguments: the relative paths for four files. The first three are input files and the last one is the output file. The first input file contains six rows/entries: the number of prisms, the number of observation points, the parameters that define the parabolic law of density variation with depth, that is, the density contrast (g/cm3) at the surface and the alpha constant (g/cm3/km) and the dimensions of the prisms (km) in the x- and y- directions. The second input file describes the 3D sediment-basement contact. It contains X-coordinate, Y-coordinate, and Z-value triplets. The XY-coordinates (km) represent the geometrical centers on prisms top. Z values (km) represent the bottom boundaries of the prisms, which coincide with the basement interface. The third input file contains the XY-coordinates (km) of the regular grid of observations. Such coordinates can not be placed on horizontal limits of the prisms (edges and corners) to prevent numerical problems during the computing of the gravity field. The content of the output file corresponds to the XY-coordinates (km) of the regular grid of observations, along with the gravity field values (mgal).
+
 To build an Open-MP version of the library, use:
 ```
 fpm build --profile release --flag "-fopenmp"
 ```
-In this case, the example must be run via
+In this case, you must set the `OMP_SET_NUM_THREADS` environment variable to specify how many threads you wish to use. Use the following commands to run the example program with two OpenMP threads
 ```
+export OMP_NUM_THREADS=2
 fpm run --profile release --flag "-fopenmp" -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/grav_anomaly.dat
 ```
 
@@ -25,7 +29,7 @@ To use `gravmod3d` within your FPM project, add the following to your `fpm.toml`
 [dependencies]
 gravmod3d = { git="https://github.com/ofmla/gravmod3d.git" }
 ```
-Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` GMT script (in `/data/gmt_scripts/` folder) after ran any of the `fpm run` commands above.
+Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` [GMT](https://www.generic-mapping-tools.org/) script (in `data/gmt_scripts/` folder) after ran any of the `fpm run` commands above.
 
 <p align="center">
   <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour.svg#gh-light-mode-only" width="600"/>
