@@ -34,12 +34,12 @@ program main
 		  iostat=ierr, status = "old")
 	if (ierr /= 0) stop 'Error: opening file failed'
 
-	read (in_unit,*) nprisms  ! Read the number of points
-	read (in_unit,*) n_grd_pts
-	read (in_unit,*) sd
-	read (in_unit,*) alpha
-	read (in_unit,*) dx
-	read (in_unit,*) dy
+	read (in_unit,*) nprisms   ! number of prisms
+	read (in_unit,*) n_grd_pts ! number of grid points
+	read (in_unit,*) sd        ! density contrast at ground surface (gm/cc)
+	read (in_unit,*) alpha     ! constant of the parabolic density function (gm/cc/Km)
+	read (in_unit,*) dx        ! size of the prisms rectangular faces in the x direction (Km)
+	read (in_unit,*) dy        ! size of the prisms rectangular faces in the y direction (Km)
 
 	! Open the data file
 	open (newunit=in1_unit, file = arg2, action = "read", &

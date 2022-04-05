@@ -13,7 +13,7 @@ module grav3d_module
 	private
 
 	! parameters
-	real(dp), parameter :: tog=13.33d0
+	real(dp), parameter :: tog=13.33_dp
 	real(dp), parameter :: z1=1e-6
 
 	public funcpdf
@@ -43,7 +43,7 @@ module grav3d_module
 	real(dp) :: t141, t142, t143, t144, t145
 	
 	dc=tog*sd**3
-	if(z .eq. 0.d0) then
+	if(z .eq. 0._dp) then
 		z2=11e-7
 	else
 		z2=z
@@ -126,7 +126,7 @@ module grav3d_module
 	character(len=5), optional :: pl_opt
 	integer :: i, j, ista, iend
 	
-	f(ista:iend)=0.d0
+	f(ista:iend)=0._dp
 	dxby2=dx/2.0
 	dyby2=dy/2.0 
 	loop='outer'
@@ -135,7 +135,7 @@ module grav3d_module
 	if (loop .ne. 'outer')then
 		!$ t1 = omp_get_wtime()  
 		do i=ista,iend
-			soma=0.d0
+			soma=0._dp
 			!$OMP PARALLEL PRIVATE(j,y,y1,y2,x,zi,dg)
 			!$OMP DO REDUCTION(+:soma) schedule (runtime)
 			do j=1,n
