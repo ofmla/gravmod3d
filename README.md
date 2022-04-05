@@ -29,13 +29,14 @@ To use `gravmod3d` within your FPM project, add the following to your `fpm.toml`
 [dependencies]
 gravmod3d = { git="https://github.com/ofmla/gravmod3d.git" }
 ```
-Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` [GMT](https://www.generic-mapping-tools.org/) script (in `data/gmt_scripts/` folder) after ran any of the `fpm run` commands above.
+Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` [GMT](https://www.generic-mapping-tools.org/) script after ran any of the `fpm run` commands above. Another GMT script `plot_3d.sh` is also provided for plotting the 3D synthetic model. Both scripts are placed in the `data/gmt_scripts/` folder
 
 <p align="center">
-  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour.svg#gh-light-mode-only" width="600"/>
+  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_light.svg#gh-light-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/true_light.svg#gh-light-mode-only" width="300"/>
 </p>
-
-Another GMT script `plot_3d.sh` is also provided in same folder for plotting the 3D synthetic model.
+<p align="center">
+  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_dark.svg#gh-dark-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/true_dark.svg#gh-dark-mode-only" width="300"/>
+</p>
 
 ## References
 
