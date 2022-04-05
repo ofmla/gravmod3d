@@ -21,7 +21,7 @@ fpm build --profile release --flag "-fopenmp"
 In this case, you must set the `OMP_SET_NUM_THREADS` environment variable to specify how many threads you wish to use. Use the following commands to run the example program with two OpenMP threads
 ```
 export OMP_NUM_THREADS=2
-fpm run --profile release --flag "-fopenmp" -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/grav_anomaly.dat
+fpm run --profile release --flag "-fopenmp" -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/gravity_anomaly.dat
 ```
 
 To use `gravmod3d` within your FPM project, add the following to your `fpm.toml` file:
