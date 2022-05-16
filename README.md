@@ -12,7 +12,17 @@ fpm build --profile release
 fpm run --profile release -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/gravity_anomaly.dat
 ```
 
-The example program computes the gravity field of a sedimentary basin (which is approximated by a set of prisms) on a regular grid of observation points. It reads four command-line arguments: the relative paths for four files. The first three are input files and the last one is the output file. The first input file contains six rows/entries: the number of prisms, the number of observation points, the parameters that define the parabolic law of density variation with depth, that is, the density contrast (g/cc) at the surface and the alpha constant (g/cc/km) and the dimensions of prisms rectangular bases (km) in the x- and y- directions. The second input file describes the 3D sediment-basement contact. It contains X-coordinate, Y-coordinate, and Z-value triplets. The XY-coordinates (km) represent the geometrical centers on prisms top. Z values (km) represent the bottom boundaries of the prisms, which coincide with the basement interface. The third input file contains the XY-coordinates (km) of the regular grid of observations. Such coordinates can not be placed on horizontal limits of the prisms (edges and corners) to prevent numerical problems during the computing of the gravity field. The content of the output file corresponds to the XY-coordinates (km) of the regular grid of observations, along with the gravity field values (mgal).
+The example program computes the gravity field of a sedimentary basin (which is approximated by a set of prisms) on a regular grid of observation points. It reads four command-line arguments: the relative paths for four files. The first three are input files and the last one is the output file. 
+- The first input file contains six rows/entries: 
+  - the number of prisms, 
+  - the number of observation points, 
+  - the parameters that define the parabolic law of density variation with depth, that is, 
+    - the density contrast (g/cc) at the surface and 
+    - the alpha constant (g/cc/km) and 
+  - the dimensions of prisms rectangular bases (km) in the x- and y- directions. 
+- The second input file describes the 3D sediment-basement contact. It contains X-coordinate, Y-coordinate, and Z-value triplets. The XY-coordinates (km) represent the geometrical centers on prisms top. Z values (km) represent the bottom boundaries of the prisms, which coincide with the basement interface.
+- The third input file contains the XY-coordinates (km) of the regular grid of observations. Such coordinates can not be placed on horizontal limits of the prisms (edges and corners) to prevent numerical problems during the computing of the gravity field. 
+- The content of the output file corresponds to the XY-coordinates (km) of the regular grid of observations, along with the gravity field values (mgal).
 
 To build an Open-MP version of the library, use:
 ```
