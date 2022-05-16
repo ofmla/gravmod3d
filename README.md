@@ -48,6 +48,8 @@ Gravity anomaly data generated from 3D synthetic model example can be ploted wit
   <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_dark.svg#gh-dark-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/true_dark.svg#gh-dark-mode-only" width="300"/>
 </p>
 
+> **_NOTE:_**  The 3D synthetic basin model is that used in the paper [*Regularization parameter selection in the 3D gravity inversion of the basement relief using GCV: A parallel approach*](https://doi.org/10.1016/j.cageo.2015.06.013), which describes a computationally efficient automatic method for the optimal selection of the regularization parameter in the 3D inversion of gravity data.
+
 ## References
 
 * [V. Chakravarthi, H.M. Raghuram, S.B. Singh,
