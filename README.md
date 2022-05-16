@@ -66,4 +66,6 @@ https://doi.org/10.1016/S0098-3004(01)00080-2.
 ## License
 
 * All refactored Fortran source code is made available under the [BSD 3-clause license](https://github.com/ofmla/gravmod3d/blob/main/LICENSE). You can freely use and modify the code, without warranty, so long as you provide attribution to the authors.
+* The basin model in file `data/synthetic_xyz.dat` is available under
+the [Creative Commons Attribution 4.0 License (CC-BY)](https://creativecommons.org/licenses/by/4.0/)
 
