@@ -119,9 +119,9 @@ module grav3d_module
 	integer  :: n, m
 	real(dp), dimension (n) :: xprm, yprm, z
 	real(dp), dimension (m) :: xrec, yrec, f
-	real(dp) :: dx, dy, sd, alpha
+	real(dp) :: dx, dy, sd, alpha, soma
 	real(dp) :: dxby2, dyby2, x, y, zi, y1, y2, dg
-	!$ real(dp) :: soma, t1, t2
+	!$ real(dp) :: t1, t2
 	character(len=5) :: loop
 	character(len=5), optional :: pl_opt
 	integer :: i, j, ista, iend
