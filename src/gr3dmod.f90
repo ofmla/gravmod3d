@@ -13,10 +13,10 @@ module grav3d_module
 	private
 
 	! parameters
-	real(dp), parameter :: tog=13.33_dp
+	real(dp), parameter :: tog=13.3486_dp
 	real(dp), parameter :: z1=1e-6
 
-	public funcpdf
+	public funcpdf, gr3dprm
 
 	contains
 !************************************************************************************      
@@ -121,7 +121,7 @@ module grav3d_module
 	real(dp), dimension (m) :: xrec, yrec, f
 	real(dp) :: dx, dy, sd, alpha
 	real(dp) :: dxby2, dyby2, x, y, zi, y1, y2, dg
-	real(dp) :: soma, t1, t2
+	!$ real(dp) :: soma, t1, t2
 	character(len=5) :: loop
 	character(len=5), optional :: pl_opt
 	integer :: i, j, ista, iend
