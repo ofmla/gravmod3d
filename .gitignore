@@ -33,4 +33,6 @@
 
 # misc
 *.pdf
-/build
+/lib
+/bin
+/doc
