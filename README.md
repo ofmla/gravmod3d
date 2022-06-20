@@ -47,10 +47,10 @@ gravmod3d = { git="https://github.com/ofmla/gravmod3d.git" }
 Gravity anomaly data generated from 3D synthetic model example can be ploted with the `contour.sh` [GMT](https://www.generic-mapping-tools.org/) script after ran any of the `fpm run` commands above. Another GMT script `plot_3d.sh` is also provided for plotting the 3D synthetic model. Both scripts are placed in the `data/gmt_scripts/` folder
 
 <p align="center">
-  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_light.svg#gh-light-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/media/true_light.svg#gh-light-mode-only" width="300"/>
+  <img src="https://github.com/ofmla/gravmod3d/blob/main/media/contour_light.svg#gh-light-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/media/true_light.svg#gh-light-mode-only" width="300"/>
 </p>
 <p align="center">
-  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_dark.svg#gh-dark-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/media/true_dark.svg#gh-dark-mode-only" width="300"/>
+  <img src="https://github.com/ofmla/gravmod3d/blob/main/media/contour_dark.svg#gh-dark-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/media/true_dark.svg#gh-dark-mode-only" width="300"/>
 </p>
 
 > **_NOTE:_**  The 3D synthetic basin model is that used in the paper [*Regularization parameter selection in the 3D gravity inversion of the basement relief using GCV: A parallel approach*](https://doi.org/10.1016/j.cageo.2015.06.013), which describes a computationally efficient automatic method for the optimal selection of the regularization parameter in the 3D inversion of gravity data.
