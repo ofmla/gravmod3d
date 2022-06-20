@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentation for gravmod3d project_dir: ./src output_dir: ./doc project_github: https://github.com/ofmla/gravmod3d summary: 3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast author: Oscar Mojica github: https://github.com/ofmla predocmark_alt: > predocmark: < docmark_alt: docmark: ! display: public source: true graph: false extra_mods: iso_fortran_env:https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html">
+    <meta name="author" content="" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> gravmod3d project_dir: ./src output_dir: ./doc project_github: https://github.com/ofmla/gravmod3d summary: 3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast author: Oscar Mojica github: https://github.com/ofmla predocmark_alt: > predocmark: < docmark_alt: docmark: ! display: public source: true graph: false extra_mods: iso_fortran_env:https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html </title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+    <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">gravmod3d project_dir: ./src output_dir: ./doc project_github: https://github.com/ofmla/gravmod3d summary: 3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast author: Oscar Mojica github: https://github.com/ofmla predocmark_alt: > predocmark: < docmark_alt: docmark: ! display: public source: true graph: false extra_mods: iso_fortran_env:https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="./lists/files.html">Source Files</a></li>
+            <li><a href="./lists/modules.html">Modules</a></li>
+            <li><a href="./lists/procedures.html">Procedures</a></li>
+              
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="./lists/procedures.html">Procedures</a></li>
+                                       </ul>
+        <form action="./search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        
+        </p>
+      </div>
+
+      <div class="row" id='text'>
+        <div class="col-md-12">
+          <h1>gravmod3d project_dir: ./src output_dir: ./doc project_github: https://github.com/ofmla/gravmod3d summary: 3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast author: Oscar Mojica github: https://github.com/ofmla predocmark_alt: > predocmark: < docmark_alt: docmark: ! display: public source: true graph: false extra_mods: iso_fortran_env:https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html</h1>
+          <h1>gravmod3d</h1>
+<p>3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast</p>
+<p>This is a modern Fortran implementation of the three-dimensional gravity modeling with parabolic density contrast presented in <a href="https://www.sciencedirect.com/science/article/pii/S0098300401000802">3-D forward gravity modeling of basement interfaces above which the density contrast varies continuously with depth</a> by V. Chakravarthi, H. M. Raghuram and S. B. Singh.</p>
+<h2>Building gravmod3d</h2>
+<p>A <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a> manifest file is included, so that the library and a simple example can be compiled with FPM. For example:</p>
+<div class="codehilite"><pre><span></span><code>fpm build --profile release
+fpm run --profile release -- data/input.dat  data/synthetic_xyz.dat data/grid_xy.dat data/gravity_anomaly.dat
+</code></pre></div>
+
+<p>The example program computes the gravity field of a sedimentary basin (which is approximated by a set of prisms) on a regular grid of observation points. It reads four command-line arguments: the relative paths for four files. The first three are input files and the last one is the output file. 
+- The first input file contains six rows/entries: 
+  - the number of prisms, 
+  - the number of observation points, 
+  - the parameters that define the parabolic law of density variation with depth, that is, 
+    - the density contrast (g/cc) at the surface and 
+    - the alpha constant (g/cc/km) and 
+  - the dimensions of prisms rectangular bases (km) in the x- and y- directions. 
+- The second input file describes the 3D sediment-basement contact. It contains X-coordinate, Y-coordinate, and Z-value triplets. The XY-coordinates (km) represent the geometrical centers on prisms top. Z values (km) represent the bottom boundaries of the prisms, which coincide with the basement interface.
+- The third input file contains the XY-coordinates (km) of the regular grid of observations. Such coordinates can not be placed on horizontal limits of the prisms (edges and corners) to prevent numerical problems during the computing of the gravity field. 
+- The content of the output file corresponds to the XY-coordinates (km) of the regular grid of observations, along with the gravity field values (mgal).</p>
+<p>To run the unit test use</p>
+<div class="codehilite"><pre><span></span><code>fpm test
+</code></pre></div>
+
+<p>To build an Open-MP version of the library, use:</p>
+<div class="codehilite"><pre><span></span><code>fpm build --profile release --flag &quot;-fopenmp&quot;
+</code></pre></div>
+
+<p>In this case, you must set the <code>OMP_SET_NUM_THREADS</code> environment variable to specify how many threads you wish to use. Use the following commands to run the example program with two OpenMP threads</p>
+<div class="codehilite"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="n">OMP_NUM_THREADS</span><span class="o">=</span><span class="mi">2</span><span class="w"></span>
+<span class="n">fpm</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="n">release</span><span class="w"> </span><span class="o">--</span><span class="n">flag</span><span class="w"> </span><span class="s2">&quot;-fopenmp&quot;</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">data</span><span class="o">/</span><span class="n">input</span><span class="o">.</span><span class="n">dat</span><span class="w">  </span><span class="n">data</span><span class="o">/</span><span class="n">synthetic_xyz</span><span class="o">.</span><span class="n">dat</span><span class="w"> </span><span class="n">data</span><span class="o">/</span><span class="n">grid_xy</span><span class="o">.</span><span class="n">dat</span><span class="w"> </span><span class="n">data</span><span class="o">/</span><span class="n">gravity_anomaly</span><span class="o">.</span><span class="n">dat</span><span class="w"></span>
+</code></pre></div>
+
+<p>To use <code>gravmod3d</code> within your FPM project, add the following to your <code>fpm.toml</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span><span class="w"></span>
+<span class="n">gravmod3d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">git</span><span class="o">=</span><span class="s">&quot;https://github.com/ofmla/gravmod3d.git&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>Gravity anomaly data generated from 3D synthetic model example can be ploted with the <code>contour.sh</code> <a href="https://www.generic-mapping-tools.org/">GMT</a> script after ran any of the <code>fpm run</code> commands above. Another GMT script <code>plot_3d.sh</code> is also provided for plotting the 3D synthetic model. Both scripts are placed in the <code>data/gmt_scripts/</code> folder</p>
+<p align="center">
+  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_light.svg#gh-light-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/true_light.svg#gh-light-mode-only" width="300"/>
+</p>
+<p align="center">
+  <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/contour_dark.svg#gh-dark-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/data/gmt_scripts/true_dark.svg#gh-dark-mode-only" width="300"/>
+</p>
+
+<blockquote>
+<p><strong><em>NOTE:</em></strong>  The 3D synthetic basin model is that used in the paper <a href="https://doi.org/10.1016/j.cageo.2015.06.013"><em>Regularization parameter selection in the 3D gravity inversion of the basement relief using GCV: A parallel approach</em></a>, which describes a computationally efficient automatic method for the optimal selection of the regularization parameter in the 3D inversion of gravity data.</p>
+</blockquote>
+<h2>References</h2>
+<ul>
+<li><a href="https://doi.org/10.1016/S0098-3004(01)00080-2">V. Chakravarthi, H.M. Raghuram, S.B. Singh,
+3-D forward gravity modeling of basement interfaces above which the density contrast varies continuously with depth,
+Computers &amp; Geosciences,
+Volume 28, Issue 1,
+2002,
+Pages 53-57,
+ISSN 0098-3004,
+https://doi.org/10.1016/S0098-3004(01)00080-2.
+(https://www.sciencedirect.com/science/article/pii/S0098300401000802)</a></li>
+<li><a href="https://iamg.org/documents/oldftp/VOL28/v28-01-06.zip">original source code</a></li>
+</ul>
+<h2>License</h2>
+<ul>
+<li>All refactored Fortran source code is made available under the <a href="https://github.com/ofmla/gravmod3d/blob/main/LICENSE">BSD 3-clause license</a>. You can freely use and modify the code, without warranty, so long as you provide attribution to the authors.</li>
+<li>The basin model in file <code>data/synthetic_xyz.dat</code> is available under
+the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License (CC-BY)</a></li>
+</ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+              <h3>Source Files</h3>
+              <ul>                    <li><a href='./sourcefile/gr3dmod.f90.html'>gr3dmod.f90</a></li>
+                    <li><a href='./sourcefile/grav_kinds.f90.html'>grav_kinds.f90</a></li>
+</ul>
+          </div>
+		  <div class="col-xs-6 col-sm-4">
+              <h3>Modules</h3>
+              <ul>                    <li><a href='./module/grav3d_module.html'>grav3d_module</a></li>
+                    <li><a href='./module/grav_kinds.html'>grav_kinds</a></li>
+</ul>
+          </div>
+		  <div class="col-xs-6 col-sm-4">
+              <h3>Procedures</h3>
+              <ul>                    <li><a href='./proc/funcpdf.html'>funcpdf</a></li>
+                    <li><a href='./proc/gr3dprm.html'>gr3dprm</a></li>
+</ul>
+          </div>
+      </div>
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>gravmod3d project_dir: ./src output_dir: ./doc project_github: https://github.com/ofmla/gravmod3d summary: 3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast author: Oscar Mojica github: https://github.com/ofmla predocmark_alt: > predocmark: < docmark_alt: docmark: ! display: public source: true graph: false extra_mods: iso_fortran_env:https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html was developed by <br>&copy; 2022 
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+          </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="./tipuesearch/tipuesearch_content.js"></script>
+    <script src="./tipuesearch/tipuesearch_set.js"></script>
+    <script src="./tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>
