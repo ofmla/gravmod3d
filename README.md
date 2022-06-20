@@ -68,6 +68,10 @@ https://doi.org/10.1016/S0098-3004(01)00080-2.
 (https://www.sciencedirect.com/science/article/pii/S0098300401000802)](https://doi.org/10.1016/S0098-3004(01)00080-2)
 * [original source code](https://iamg.org/documents/oldftp/VOL28/v28-01-06.zip)
 
+## Documentation
+
+The latest API documentation can be found [here](https://ofmla.github.io/gravmod3d/). This was generated from the source code using [FORD](https://github.com/Fortran-FOSS-Programmers/ford) (i.e. by running `ford gravmod3d.md`).
+
 ## License
 
 * All refactored Fortran source code is made available under the [BSD 3-clause license](https://github.com/ofmla/gravmod3d/blob/main/LICENSE). You can freely use and modify the code, without warranty, so long as you provide attribution to the authors.
