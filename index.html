@@ -85,8 +85,7 @@
       <div class="row" id='text'>
         <div class="col-md-8">
           <h1>gravmod3d</h1>
-          <h1>gravmod3d</h1>
-<p>3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast</p>
+          <p>3D forward modeling of bodies discretized by rectangular prisms with parabolic density contrast</p>
 <p>This is a modern Fortran implementation of the three-dimensional gravity modeling with parabolic density contrast presented in <a href="https://www.sciencedirect.com/science/article/pii/S0098300401000802">3-D forward gravity modeling of basement interfaces above which the density contrast varies continuously with depth</a> by V. Chakravarthi, H. M. Raghuram and S. B. Singh.</p>
 <h2>Building gravmod3d</h2>
 <p>A <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a> manifest file is included, so that the library and a simple example can be compiled with FPM. For example:</p>
@@ -124,13 +123,6 @@ fpm run --profile release -- data/input.dat  data/synthetic_xyz.dat data/grid_xy
 </code></pre></div>
 
 <p>Gravity anomaly data generated from 3D synthetic model example can be ploted with the <code>contour.sh</code> <a href="https://www.generic-mapping-tools.org/">GMT</a> script after ran any of the <code>fpm run</code> commands above. Another GMT script <code>plot_3d.sh</code> is also provided for plotting the 3D synthetic model. Both scripts are placed in the <code>data/gmt_scripts/</code> folder</p>
-<p align="center">
-  <img src="https://github.com/ofmla/gravmod3d/blob/main/media/contour_light.svg#gh-light-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/media/true_light.svg#gh-light-mode-only" width="300"/>
-</p>
-<p align="center">
-  <img src="https://github.com/ofmla/gravmod3d/blob/main/media/contour_dark.svg#gh-dark-mode-only" width="250"/> <img src="https://github.com/ofmla/gravmod3d/blob/main/media/true_dark.svg#gh-dark-mode-only" width="300"/>
-</p>
-
 <blockquote>
 <p><strong><em>NOTE:</em></strong>  The 3D synthetic basin model is that used in the paper <a href="https://doi.org/10.1016/j.cageo.2015.06.013"><em>Regularization parameter selection in the 3D gravity inversion of the basement relief using GCV: A parallel approach</em></a>, which describes a computationally efficient automatic method for the optimal selection of the regularization parameter in the 3D inversion of gravity data.</p>
 </blockquote>
