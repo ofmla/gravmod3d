@@ -24,6 +24,11 @@ The example program computes the gravity field of a sedimentary basin (which is 
 - The third input file contains the XY-coordinates (km) of the regular grid of observations. Such coordinates can not be placed on horizontal limits of the prisms (edges and corners) to prevent numerical problems during the computing of the gravity field. 
 - The content of the output file corresponds to the XY-coordinates (km) of the regular grid of observations, along with the gravity field values (mgal).
 
+To run the unit test use
+```
+fpm test
+```
+
 To build an Open-MP version of the library, use:
 ```
 fpm build --profile release --flag "-fopenmp"
