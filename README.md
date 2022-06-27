@@ -1,3 +1,4 @@
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ofmla/gravmod3d)](https://github.com/ofmla/gravmod3d/releases/latest)
 [![Build Status](https://github.com/ofmla/gravmod3d/actions/workflows/CI.yml/badge.svg)](https://github.com/ofmla/gravmod3d/actions)
 [![codecov](https://codecov.io/gh/ofmla/gravmod3d/branch/main/graph/badge.svg?token=5EG5S91NG6)](https://codecov.io/gh/ofmla/gravmod3d)[![last-commit](https://img.shields.io/github/last-commit/ofmla/gravmod3d)](https://github.com/ofmla/gravmod3d/commits/main)
 
